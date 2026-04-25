@@ -1,7 +1,5 @@
 @import "tailwindcss";
 body {
-  background-color: #191919;
-  font-family: "Steinberg", sans-serif;
 }
 .container {
   max-width: 1270px;

@@ -5,6 +5,10 @@ import Nasr from "../pages/Nasr";
 import Nazm from "../pages/Nazm";
 import Artical from "../pages/Article";
 import Forum from "../pages/Forum";
+import SingUp from "../pages/SingUp";
+import SingIn from "../pages/SingIn";
+import AddBook from "../pages/AddBook";
+import AddAuthor from "../pages/AddAuthor";
 
 const routers = createBrowserRouter([
   {
@@ -33,12 +37,20 @@ const routers = createBrowserRouter([
     ],
   },
   {
-    path: "/sign-up",
-    element: <h1>SignUp</h1>,
+    path: "/sing-up",
+    element: <SingUp />,
   },
   {
-    path: "/sign-in",
-    element: <h1>SignIn</h1>,
+    path: "/sing-in",
+    element: <SingIn />,
+  },
+  {
+    path: "/addbook",
+    element: <AddBook />,
+  },
+  {
+    path: "/addauthor",
+    element: <AddAuthor />,
   },
   {
     path: "*",

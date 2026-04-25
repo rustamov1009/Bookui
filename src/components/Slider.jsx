@@ -16,7 +16,7 @@ const Slider = () => {
   }, [images.length]);
 
   return (
-    <section className="relative h-80 w-full max-w-317.5 overflow-hidden rounded-[28px]">
+    <section className="relative h-80 w-full max-w-317.5 overflow-hidden rounded-[28px] mt-12.5 ">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-700"
         style={{
