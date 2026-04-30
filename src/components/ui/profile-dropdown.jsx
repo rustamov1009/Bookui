@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import ProfileIcon from "../../assets/profile-icon.svg";
+import { useUserStore } from "../../store/user,store";
 const menuItems = [
   {
     label: "Profil",
@@ -66,13 +67,11 @@ const SvgIcon = ({ children }) => (
   </svg>
 );
 
-export default function ProfileDropdown({
-  user = {
-    name: "Asilbek Karimov",
-    email: "asilbek@example.com",
-    avatar: ProfileIcon,
-  },
-}) {
+export default function ProfileDropdown({}) {
+  const data = useUserStore();
+  const user = { ...data.user, avatar: ProfileIcon };
+  console.log(user);
+
   const [isOpen, setIsOpen] = useState(false);
   const wrapperRef = useRef(null);
 
@@ -97,7 +96,7 @@ export default function ProfileDropdown({
           {user.avatar ? (
             <img
               src={user.avatar}
-              alt={user.name}
+              alt={user.firstname}
               className="w-full h-full object-cover"
             />
           ) : (
@@ -145,7 +144,7 @@ export default function ProfileDropdown({
             )}
           </div>
           <div>
-            <p className="text-white text-sm font-semibold">{user.name}</p>
+            <p className="text-white text-sm font-semibold">{user.firstname}</p>
             <p className="text-zinc-400 text-xs">{user.email}</p>
           </div>
         </div>
@@ -153,14 +152,15 @@ export default function ProfileDropdown({
         {/* Menu items */}
         <div className="py-2">
           {menuItems.map((item) => (
-            <button
+            <a
+              href="/profile"
               key={item.label}
               onClick={() => setIsOpen(false)}
               className="w-full flex items-center gap-3 px-4 py-2.5 text-zinc-300 hover:bg-zinc-700 hover:text-white transition-colors text-sm text-left"
             >
               <SvgIcon>{item.icon}</SvgIcon>
               {item.label}
-            </button>
+            </a>
           ))}
         </div>
 

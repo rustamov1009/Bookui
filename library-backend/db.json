@@ -1,24 +1,14 @@
 {
   "users": [
     {
-      "id": "1776939991669",
-      "firstname": "Zayniddin",
-      "lastname": "Kamolov",
-      "phone": "+998901235263",
-      "email": "llegion630@gmail.com",
-      "password": "$2a$10$zgVlEU2tciv.bacnchLlluru0/bt5.0S/Ud2sAo99Cgfks7jNQTpS",
+      "id": "1777303285057",
+      "firstname": "rustamjon",
+      "lastname": "rustamov",
+      "phone": "+99899938232",
+      "email": "pushrankk0@gmail.com",
+      "password": "$2a$10$cvSVUgXqct7SMwJ5RhUxrulsCT8W09HTfKge9KM0w2PiRXOIesndG",
       "avatar": "",
-      "createdAt": "2026-04-23T10:26:31.669Z"
-    },
-    {
-      "id": "1776941267411",
-      "firstname": "Rustamjon",
-      "lastname": "Akramov",
-      "phone": "+998901235263",
-      "email": "rustamjon@gmail.com",
-      "password": "$2a$10$vlFAgZthf4dk5KWcnT4Gf.LeQKjZ3IaDvkfx4OToa7O1Fe6hBiobq",
-      "avatar": "",
-      "createdAt": "2026-04-23T10:47:47.411Z"
+      "createdAt": "2026-04-27T15:21:25.057Z"
     }
   ],
   "books": [],

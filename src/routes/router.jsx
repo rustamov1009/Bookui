@@ -9,6 +9,10 @@ import SingUp from "../pages/SingUp";
 import SingIn from "../pages/SingIn";
 import AddBook from "../pages/AddBook";
 import AddAuthor from "../pages/AddAuthor";
+import Profile from "../pages/Profile";
+import Account from "../components/profile-tab/Account";
+import Securyty from "../components/profile-tab/Securyty";
+import Settings from "../components/profile-tab/Settings";
 
 const routers = createBrowserRouter([
   {
@@ -53,8 +57,31 @@ const routers = createBrowserRouter([
     element: <AddAuthor />,
   },
   {
+    path: "/profile",
+    element: <Profile />,
+    children: [
+      {
+        index: true,
+        element: <Account />,
+      },
+      {
+        path: "account",
+        element: <Account />,
+      },
+      {
+        path: "security",
+        element: <Securyty />,
+      },
+      {
+        path: "settings",
+        element: <Settings />,
+      },
+    ],
+  },
+  {
     path: "*",
     element: <h2>Not found</h2>,
   },
 ]);
+
 export default routers;
